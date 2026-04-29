@@ -34,19 +34,26 @@ export function Footer() {
               <a
                 key={name}
                 href="#"
-                className="group flex flex-col gap-1"
+                className="group flex items-start gap-3"
               >
-                <span className="font-sans text-[13px] font-medium text-foreground transition-colors group-hover:text-accent">
-                  {name}
-                  <ArrowUpRight
-                    size={11}
-                    weight="bold"
-                    className="ml-1 inline-block align-baseline opacity-0 transition-opacity group-hover:opacity-100"
-                  />
-                </span>
-                <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-zinc-500">
-                  {note}
-                </span>
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded bg-white/[0.03] text-zinc-500 transition-colors group-hover:bg-white/[0.08] group-hover:text-accent border border-white/5 group-hover:border-accent/30">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8 2 4 4.5 4 9c0 3 1.5 5.5 3 7l1 4 4-2 4 2 1-4c1.5-1.5 3-4 3-7 0-4.5-4-7-8-7zm0 2c3 0 6 2 6 5s-1.5 4-3 5l-1-2h-4l-1 2c-1.5-1-3-2-3-5s3-5 6-5zM8 9h2v2H8V9zm6 0h2v2h-2V9z"/>
+                  </svg>
+                </div>
+                <div className="flex flex-col gap-0.5 pt-0.5">
+                  <span className="font-sans text-[13px] font-medium text-foreground transition-colors group-hover:text-accent">
+                    {name}
+                    <ArrowUpRight
+                      size={11}
+                      weight="bold"
+                      className="ml-1 inline-block align-baseline opacity-0 transition-opacity group-hover:opacity-100"
+                    />
+                  </span>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-zinc-500">
+                    {note}
+                  </span>
+                </div>
               </a>
             ))}
           </nav>

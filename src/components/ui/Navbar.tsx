@@ -11,10 +11,15 @@ export function Navbar() {
           href="/"
           className="flex items-center gap-2.5 font-mono text-[11px] font-semibold uppercase tracking-[0.32em] text-foreground"
         >
-          <span
-            aria-hidden
-            className="inline-block h-2 w-2 rounded-full bg-accent shadow-[0_0_12px_rgba(212,162,47,0.9)]"
-          />
+          <span className="relative flex h-4 w-4 items-center justify-center">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-20"></span>
+            <svg width="16" height="16" viewBox="0 0 24 24" className="animate-[spin_4s_linear_infinite] text-accent">
+              <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="4 4" className="opacity-80" />
+              <circle cx="12" cy="12" r="4" fill="currentColor" className="opacity-90" />
+              <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" strokeWidth="1" className="opacity-30" />
+            </svg>
+            <span className="absolute h-2 w-2 rounded-full bg-accent blur-[4px]"></span>
+          </span>
           Stark / Industries
         </Link>
 

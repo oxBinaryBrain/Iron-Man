@@ -241,12 +241,12 @@ export function Hero() {
             Protocol &mdash; Mk LXXXV
           </span>
           <h2 className="font-sans font-semibold leading-[0.88] tracking-tighter text-foreground text-[clamp(4rem,9.5vw,9rem)]">
-            Build
+            Powered
             <br />
-            with <span className="text-accent">Devini</span>
+            by <span className="text-accent">Stark Tech</span>
           </h2>
           <p className="max-w-[36ch] font-mono text-[11px] uppercase tracking-[0.22em] text-zinc-400">
-            Interfaces &amp; products, engineered like the Mark LXXXV.
+            Next-generation armor systems, engineered for the future.
           </p>
         </div>
 
@@ -348,14 +348,17 @@ export function Hero() {
         {!loaded && (
           <div className="absolute inset-0 z-30 flex flex-col items-center justify-center gap-5 bg-background px-6">
             <EyebrowBadge>SUIT UP PROTOCOL // BOOTING</EyebrowBadge>
-            <div className="h-px w-60 bg-white/10 md:w-80">
-              <div
-                className="h-full bg-accent transition-[width] duration-150 ease-out"
-                style={{ width: `${Math.round(loadProgress * 100)}%` }}
-              />
+            <div className="relative flex h-20 w-20 items-center justify-center">
+              <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full animate-[spin_3s_linear_infinite] text-accent/20">
+                <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="10 5" />
+              </svg>
+              <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full animate-[spin_2s_linear_infinite_reverse] text-accent/60">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="40 15 10 15" />
+              </svg>
+              <span className="font-mono text-[11px] font-bold text-accent">{Math.round(loadProgress * 100)}%</span>
             </div>
-            <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-zinc-500">
-              Loading Mark LXXXV &nbsp;&middot;&nbsp; {Math.round(loadProgress * 100)}%
+            <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.28em] text-zinc-500">
+              Loading Mark LXXXV
             </p>
           </div>
         )}
